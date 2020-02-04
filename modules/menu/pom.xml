@@ -63,5 +63,6 @@
 	<modules>
 		<module>menu-api</module>
 		<module>menu-service</module>
+		<module>menu-web</module>
 	</modules>
 </project>

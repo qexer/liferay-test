@@ -12,6 +12,5 @@
 	<packaging>pom</packaging>
   <modules>
     <module>menu</module>
-    <module>menu-web</module>
   </modules>
 </project>

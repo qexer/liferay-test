@@ -1,7 +1,3 @@
-package menu.web.portlet;
-
-import menu.web.constants.MenuWebPortletKeys;
-
 import com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet;
 
 import javax.portlet.Portlet;

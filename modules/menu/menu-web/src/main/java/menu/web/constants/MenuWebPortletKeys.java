@@ -1,5 +1,3 @@
-package menu.web.constants;
-
 /**
  * @author AndrásMarton
  */
