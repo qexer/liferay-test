@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<beans
+	default-destroy-method="destroy"
+	default-init-method="afterPropertiesSet"
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+>
+	<bean class="menu.service.impl.DrinkLocalServiceImpl" id="menu.service.DrinkLocalService" />
+	<bean class="menu.service.impl.DrinkServiceImpl" id="menu.service.DrinkService" />
+	<bean class="menu.service.persistence.impl.DrinkPersistenceImpl" id="menu.service.persistence.DrinkPersistence" parent="basePersistence" />
+	<bean class="menu.service.impl.FoodLocalServiceImpl" id="menu.service.FoodLocalService" />
+	<bean class="menu.service.impl.FoodServiceImpl" id="menu.service.FoodService" />
+	<bean class="menu.service.persistence.impl.FoodPersistenceImpl" id="menu.service.persistence.FoodPersistence" parent="basePersistence" />
+</beans>

@@ -1,0 +1,10 @@
+Bundle-Name: menu-api
+Bundle-SymbolicName: menu.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	menu.exception,\
+	menu.model,\
+	menu.service,\
+	menu.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../menu-service/service.xml

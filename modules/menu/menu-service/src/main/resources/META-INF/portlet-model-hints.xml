@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="menu.model.Drink">
+		<field name="uuid" type="String" />
+		<field name="drinkId" type="long" />
+		<field name="name" type="String" />
+		<field name="price" type="int" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="menu.model.Food">
+		<field name="uuid" type="String" />
+		<field name="foodId" type="long" />
+		<field name="name" type="String" />
+		<field name="details" type="String" />
+		<field name="spicy" type="boolean" />
+		<field name="price" type="int" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+</model-hints>
