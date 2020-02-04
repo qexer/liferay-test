@@ -60,7 +60,7 @@
 	</dependencies>
 	<build>
 		<plugins>
-			<!--<plugin>
+			<plugin>
 				<groupId>biz.aQute.bnd</groupId>
 				<artifactId>bnd-maven-plugin</artifactId>
 				<version>3.5.0</version>
@@ -83,7 +83,7 @@
 						<version>3.1.0</version>
 					</dependency>
 				</dependencies>
-			</plugin>-->
+			</plugin>
 			<plugin>
 				<groupId>com.liferay</groupId>
 				<artifactId>com.liferay.css.builder</artifactId>
@@ -100,7 +100,7 @@
 					<baseDir>src/main/resources/META-INF/resources</baseDir>
 				</configuration>
 			</plugin>
-			<!--<plugin>
+			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.1</version>
@@ -121,7 +121,7 @@
 						<exclude>**/META-INF/resources/**/.sass-cache/</exclude>
 					</excludes>
 				</configuration>
-			</plugin>-->
+			</plugin>
 		</plugins>
 	</build>
 </project>
