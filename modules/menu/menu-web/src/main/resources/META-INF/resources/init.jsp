@@ -20,7 +20,7 @@ taglib uri="http://liferay.com/tld/ui" prefix="liferay-ui" %>
 <%@page import="com.liferay.portal.kernel.portlet.PortletURLUtil"%>
 <%@page import="com.liferay.portal.kernel.util.ParamUtil"%>
 
-<%@ taglib prefix="clay" uri="http://liferay.com/tld/clay" %>
+<%@ taglib uri="http://liferay.com/tld/clay" prefix="clay" %>
 
 <liferay-theme:defineObjects />
 

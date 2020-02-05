@@ -1,7 +1,10 @@
+package menu.web.portlet;
+
 import com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet;
 
 import javax.portlet.Portlet;
 
+import menu.web.constants.MenuWebPortletKeys;
 import org.osgi.service.component.annotations.Component;
 
 import java.util.ArrayList;

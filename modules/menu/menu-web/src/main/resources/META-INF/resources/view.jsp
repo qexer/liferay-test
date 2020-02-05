@@ -3,6 +3,7 @@
 <%@ page import="com.liferay.portal.kernel.util.ListUtil" %>
 <%@ page import="java.util.List" %>
 <%@ page import="java.util.ArrayList" %>
+<%@ page import="menu.web.portlet.DrinkManagementToolbarDisplayContext" %>
 
 
 <%
@@ -21,14 +22,16 @@
 	<portlet:param name="mvcPath" value="/add_drink.jsp"/>
 </portlet:renderURL>
 
-<a href="<%=addDrinkPageURL.toString()%>">Add Drink</a><br>
+<%--<a href="$(addDrinkPageURL)">Add Drink</a><br> // TODO: url--%>
 
 <%--<%= testList.toString()%>--%>
 
 <clay:management-toolbar
 		searchContainerId="<%=drinkSearchContainerID%>"
-		selectable="<%= false %>"
-/>
+		selectable="<%= false %>" />
+		<%--clearResultsURL="<%= String.valueOf(DrinkManagementToolbarDisplayContext.getSearchURL()) %>"
+		searchActionURL="<%= String.valueOf(DrinkManagementToolbarDisplayContext.getSearchURL()) %>"
+		filterDropdownItems="<%= DrinkManagementToolbarDisplayContext.getFilterDropdownItems() %>"--%>
 <%--		displayContext="<%= DrinkManagementToolbarDisplayContext %>" totalItems="<%= drinkSearchContainerDelta %>"--%>
 
 <liferay-ui:search-container delta="<%=drinkSearchContainerDelta%>"

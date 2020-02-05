@@ -11,6 +11,6 @@
 	<name>proba Modules</name>
 	<packaging>pom</packaging>
   <modules>
-    <module>menu</module>
+	  <module>menu</module>
   </modules>
 </project>
