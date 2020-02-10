@@ -11,6 +11,8 @@
 	<name>proba Modules</name>
 	<packaging>pom</packaging>
   <modules>
-	  <module>menu</module>
+    <module>menucard</module>
+    <module>menucard-frontend</module>
+	  <module>basic</module>
   </modules>
 </project>

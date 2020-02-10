@@ -1,0 +1,10 @@
+Bundle-Name: menucard-api
+Bundle-SymbolicName: card.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	card.exception,\
+	card.model,\
+	card.service,\
+	card.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../menucard-service/service.xml
