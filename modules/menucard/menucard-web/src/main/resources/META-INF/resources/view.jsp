@@ -11,6 +11,7 @@
 <%@ page import="com.liferay.portal.kernel.util.Constants" %>
 <%@ page import="menucard.portlet.DrinkManagementToolbarDisplayContext" %>
 <%@ page import="com.liferay.portal.kernel.dao.search.EmptyOnClickRowChecker" %>
+<%@ page import="javax.portlet.ActionURL" %>
 <%@ include file="/init.jsp" %>
 
 <%
@@ -97,12 +98,12 @@
                 <portlet:param name="drinkId" value="<%= String.valueOf(drink.getDrinkId()) %>" />
             </portlet:renderURL>
             <clay:link href="<%=editURL%>" icon="pencil"/>
-            <%--<portlet:actionURL var="deleteURL">
+            <portlet:actionURL var="deleteURL">
                 <portlet:param name="<%= Constants.CMD %>" value="<%=  Constants.DELETE %>" />
                 <portlet:param name="redirect" value="<%=currentURL%>" />
-                <portlet:param name="drinkId" value="<%= drink.getDrinkId() %>" />
+                <portlet:param name="drinkId" value="<%= String.valueOf(drink.getDrinkId()) %>" />
             </portlet:actionURL>
-            <clay:link href="<%=deleteURL%>" icon="trash"/>--%>
+            <clay:link href="<%=deleteURL%>" icon="trash"/>
         </liferay-ui:search-container-column-text>
     </liferay-ui:search-container-row>
     <liferay-ui:search-iterator markupView="lexicon" />
