@@ -9,6 +9,8 @@
 <%@ page import="java.util.Arrays" %>
 <%@ page import="java.util.Random" %>
 <%@ page import="com.liferay.portal.kernel.util.Constants" %>
+<%@ page import="menucard.portlet.DrinkManagementToolbarDisplayContext" %>
+<%@ page import="com.liferay.portal.kernel.dao.search.EmptyOnClickRowChecker" %>
 <%@ include file="/init.jsp" %>
 
 <%
@@ -55,10 +57,24 @@
 </portlet:renderURL>
 <clay:link href="<%=addDrinkURL%>" icon="plus" label="<%=addElementLabel%>" />
 
-
+<%
+    DrinkManagementToolbarDisplayContext drinkManagementToolbarDisplayContext = new DrinkManagementToolbarDisplayContext(request, liferayPortletResponse);
+%>
+<portlet:renderURL var="searchURL">
+    <portlet:param name="mvcPath" value="/view.jsp" />
+    <portlet:param name="redirect" value="<%=currentURL%>" />
+</portlet:renderURL>
 <clay:management-toolbar
         searchContainerId="<%=drinkSearchContainerID%>"
-        selectable="<%= false %>" />
+        selectable="<%= false %>"
+        componentId="drinkManagementToolbarDisplayContext"
+        itemsTotal="<%=drinkList.size()%>"
+        searchActionURL="<%=searchURL%>"
+        clearResultsURL="<%=searchURL%>"
+        searchFormName="fm"
+        searchInputName="<%= DisplayTerms.KEYWORDS %>"/>
+<%--        searchValue="<%= ParamUtil.getString(request, searchInputName) %>"--%>
+<%--namespace="<%= renderResponse.getNamespace() %>"--%>
 
 <liferay-ui:search-container delta="<%=drinkSearchContainerDelta%>"
                              deltaConfigurable="true"
@@ -66,9 +82,10 @@
                              total="<%=drinkList.size()%>"
                              id="<%=drinkSearchContainerID%>"
                              emptyResultsMessage="No Items were found!">
+<%--    rowChecker="<%= new EmptyOnClickRowChecker(renderResponse) %>"--%>
     <liferay-ui:search-container-results
             results="<%=drinkList.subList(searchContainer.getStart(), searchContainer.getEnd())%>" />
-    <liferay-ui:search-container-row className="Drink" modelVar="drink">
+    <liferay-ui:search-container-row escapedModel="<%= true %>" keyProperty="drinkId" className="Drink" modelVar="drink" >
         <liferay-ui:search-container-column-text name="drinkId" property="drinkId" />
         <liferay-ui:search-container-column-text name="name" property="name" />
         <liferay-ui:search-container-column-text name="description" property="description" />
