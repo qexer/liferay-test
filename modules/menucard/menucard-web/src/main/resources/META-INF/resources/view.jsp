@@ -55,16 +55,17 @@
 </portlet:renderURL>
 <clay:link href="<%=addDrinkURL%>" icon="plus" label="<%=addElementLabel%>" />
 
+
 <clay:management-toolbar
         searchContainerId="<%=drinkSearchContainerID%>"
-        selectable="<%= false %>"/>
+        selectable="<%= false %>" />
 
 <liferay-ui:search-container delta="<%=drinkSearchContainerDelta%>"
                              deltaConfigurable="true"
-                             id="<%=drinkSearchContainerID%>"
-                             emptyResultsMessage="No Items were found!"
                              iteratorURL="<%=iteratorURL%>"
-                             total="<%=drinkList.size()%>">
+                             total="<%=drinkList.size()%>"
+                             id="<%=drinkSearchContainerID%>"
+                             emptyResultsMessage="No Items were found!">
     <liferay-ui:search-container-results
             results="<%=drinkList.subList(searchContainer.getStart(), searchContainer.getEnd())%>" />
     <liferay-ui:search-container-row className="Drink" modelVar="drink">
