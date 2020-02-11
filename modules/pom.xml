@@ -12,7 +12,5 @@
 	<packaging>pom</packaging>
   <modules>
     <module>menucard</module>
-    <module>menucard-frontend</module>
-	  <module>basic</module>
   </modules>
 </project>

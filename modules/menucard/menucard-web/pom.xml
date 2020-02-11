@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<parent>
-    <artifactId>proba-modules</artifactId>
-    <groupId>proba</groupId>
-    <version>1.0.0</version>
-  </parent>
-	<groupId>menucard</groupId>
-	<artifactId>menucard-frontend</artifactId>
+	<artifactId>menucard-web</artifactId>
 	<version>1.0.0</version>
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	</properties>
+	<parent>
+		<groupId>card</groupId>
+		<artifactId>menucard</artifactId>
+		<version>1.0.0</version>
+	</parent>
 	<dependencies>
 		<dependency>
 			<groupId>com.liferay.portal</groupId>
@@ -49,23 +45,16 @@
 			<version>1.3.0</version>
 			<scope>provided</scope>
 		</dependency>
-		<!--		custom-->
 		<dependency>
 			<groupId>com.liferay</groupId>
 			<artifactId>com.liferay.frontend.taglib.clay</artifactId>
 			<version>3.0.2</version>
 		</dependency>
-<!--		TODO: a systemPath-os rondaságot eltűntetni -->
 		<dependency>
 			<groupId>card</groupId>
 			<artifactId>menucard-api</artifactId>
 			<version>1.0.0</version>
-			<!--menucard\menucard-api\target\menucard-api-1.0.0.jar
-			<scope>compile</scope>-->
-			<scope>system</scope>
-			<systemPath>C:\Liferay\proba\modules\menucard\menucard-api\target\menucard-api-1.0.0.jar</systemPath>
 		</dependency>
-		<!--		custom-->
 	</dependencies>
 	<build>
 		<plugins>

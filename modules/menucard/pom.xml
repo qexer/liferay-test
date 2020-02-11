@@ -63,5 +63,6 @@
 	<modules>
 		<module>menucard-api</module>
 		<module>menucard-service</module>
+		<module>menucard-web</module>
 	</modules>
 </project>
